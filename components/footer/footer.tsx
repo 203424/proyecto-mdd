@@ -30,7 +30,7 @@ export const Footer = memo(function Footer() {
         ))}
       </div>
 
-      <div className="bg-brand-black flex flex-col items-center justify-center gap-3 py-8 laptop:py-9">
+{/*       <div className="bg-brand-black flex flex-col items-center justify-center gap-3 py-8 laptop:py-9">
         <Link href="/" title="Spencer and Williams">
           <LogoSymbol />
         </Link>
@@ -52,7 +52,7 @@ export const Footer = memo(function Footer() {
             </Link>
           </li>
         </ul>
-      </div>
+      </div> */}
     </footer>
   )
 })
