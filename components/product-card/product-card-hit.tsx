@@ -40,7 +40,7 @@ export function ProductCardHitComponent({
     reviews: hit.reviews.count,
   }
 
-  // On sales
+ /*  // On sales
   if (hit.price.on_sales) {
     product.originalPrice = hit.price.value
     product.price = hit.price.discounted_value
@@ -50,7 +50,7 @@ export function ProductCardHitComponent({
       theme: 'on-sale',
     } as ProductTagType)
   }
-
+ */
   // Highlighting
   if (highlighting) {
     product.labelHighlighting = () => (
@@ -74,13 +74,13 @@ export function ProductCardHitComponent({
     product.description = hit.description
   }
 
-  // Tags
+ /*  // Tags
   if (product.reviews && product.reviews >= 90) {
     product.tags?.push({
       label: 'popular',
       theme: 'popular',
     } as ProductTagType)
-  }
+  } */
 
   // Colors
   if (hit.color.filter_group) {
