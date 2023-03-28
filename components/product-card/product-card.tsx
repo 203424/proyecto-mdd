@@ -1,10 +1,8 @@
 import classNames from 'classnames'
 import type { MouseEvent, MouseEventHandler } from 'react'
-import { useCallback, useState } from 'react'
-
+import { useCallback } from 'react'
 import { ProductColorVariationList } from '@/components/product/product-color-variation-list'
 import { ProductDescription } from '@/components/product/product-description'
-import { ProductFavorite } from '@/components/product/product-favorite'
 import { ProductImage } from '@/components/product/product-image'
 import { ProductLabel } from '@/components/product/product-label'
 import type { ProductPriceCurrency } from '@/components/product/product-price'
@@ -57,12 +55,7 @@ export function ProductCard({
   view = 'grid',
   onLinkClick,
 }: ProductCardProps) {
-  const [isFavorite, setIsFavorite] = useState(false)
-  const handleFavoriteClick = useCallback(
-    () => setIsFavorite((favorite) => !favorite),
-    []
-  )
-
+ 
   const handleLinkClick = useCallback(
     (e: MouseEvent<HTMLAnchorElement>) => {
       if (typeof onLinkClick === 'function') onLinkClick(e)

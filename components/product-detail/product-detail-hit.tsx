@@ -1,11 +1,8 @@
 import { useRouter } from 'next/router'
 import { useCallback } from 'react'
 import searchInsights from 'search-insights'
-
-import type { ProductTagType } from '@/components/product/product-tag'
 import type { HitComponentProps, ProductHit } from '@/typings/hits'
 import { indexName } from '@/utils/env'
-
 import { ProductDetail } from './product-detail'
 import type { ProductDetailProps } from './product-detail'
 
@@ -28,26 +25,6 @@ export function ProductDetailHit({ hit }: ProductDetailHitProps) {
     },
   }
 
- /*  // On sales
-  if (hit.price.on_sales) {
-    product.originalPrice = hit.price.value
-    product.price = hit.price.discounted_value
-
-    product.tags?.push({
-      label: `on sale ${hit.price.discount_level}%`,
-      theme: 'on-sale',
-    } as ProductTagType)
-  }
-
-  // Tags
-  if (product.reviews && product.reviews >= 90) {
-    product.popular = true
-    product.tags?.push({
-      label: 'popular',
-      theme: 'popular',
-    } as ProductTagType)
-  }
- */
   // Sizes
   if (hit.available_sizes.length) {
     product.sizes?.push(

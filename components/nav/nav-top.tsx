@@ -1,12 +1,11 @@
 
 import dynamic from 'next/dynamic'
 import { memo } from 'react'
-
 import type { LogoProps } from '@/components/logo/logo'
 import { NavItem } from '@/components/nav/nav-item'
 
 const Logo = dynamic<LogoProps>(() =>
-  import(/* webpackChunkName: 'common' */ '@/components/logo/logo').then(
+  import('@/components/logo/logo').then(
     (mod) => mod.Logo
   )
 )
@@ -18,75 +17,11 @@ export const NavTop = memo(function NavTop() {
         <div className="flex items-center">
           <Logo />
         </div>
-
-        <div className="flex gap-48">
-          <div className="hidden items-center gap-8 laptop:flex">
-            {/* <Link
-              href="/support"
-              title="Support"
-              className="can-hover:transition-colors can-hover:hover:text-neutral-dark"
-              onClick={(e) => e.preventDefault()}
-            >
-              <IconLabel
-                icon={HeadsetMicIcon}
-                label="Support"
-                labelPosition="right"
-                classNameLabel="label-regular"
-              />
-            </Link> */}
-           {/*  <Link
-              href="/store-locator"
-              title="Find a store"
-              className="can-hover:transition-colors can-hover:hover:text-neutral-dark"
-              onClick={(e) => e.preventDefault()}
-            >
-              <IconLabel
-                icon={PinDropIcon}
-                label="Find a store"
-                labelPosition="right"
-                classNameLabel="label-regular"
-              />
-            </Link> */}
-          </div>
-
-          {/* <div className="flex items-center gap-6 laptop:gap-3">
-            <Tablet>
-              <Button title="Stores">
-                <IconLabel icon={PinDropIcon} label="Stores" />
-              </Button>
-            </Tablet>
-            <Laptop>
-              <Button title="Favorites">
-                <IconLabel icon={FavoriteIcon} />
-              </Button>
-            </Laptop>
-
-            <Button title="Account">
-              <Tablet>
-                <IconLabel icon={PersonIcon} label="Account" />
-              </Tablet>
-              <Laptop>
-                <IconLabel icon={PersonIcon} />
-              </Laptop>
-            </Button>
-
-            <Button title="Cart">
-              <Tablet>
-                <IconLabel icon={ShoppingBagIcon} label="Cart" />
-              </Tablet>
-              <Laptop>
-                <IconLabel icon={ShoppingBagIcon} />
-              </Laptop>
-            </Button>
-          </div> */}
-        </div>
       </div>
-
       <nav className="hidden laptop:block">
         <ul className="hidden gap-6 uppercase laptop:flex">
           <NavItem label="Women" href="/catalog/Women" />
           <NavItem label="Men" href="/catalog/Men" />
-          {/* <NavItem label="Accessories" href="/catalog/Accessories" /> */}
         </ul>
       </nav>
     </div>

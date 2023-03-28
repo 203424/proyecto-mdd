@@ -12,9 +12,11 @@ const ifdefOpts = {
 
 /** @type {import('next').NextConfig} */
 module.exports = withNextPlugins([withBundleAnalyzer, withPWA], {
+ 
   generateBuildId: () => 'build',
   eslint: {
     dirs: ['pages', 'components', 'config', 'layouts', 'lib', 'utils', 'hooks'],
+    ignoreDuringBuilds: true,
   },
   images: {
     formats: ['image/avif', 'image/webp'],

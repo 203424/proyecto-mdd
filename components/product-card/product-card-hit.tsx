@@ -3,10 +3,8 @@ import isEqual from 'react-fast-compare'
 import type { WrappedInsightsClient } from 'react-instantsearch-core'
 import { Highlight, connectHitInsights, Snippet } from 'react-instantsearch-dom'
 import searchInsights from 'search-insights'
-
 import type { ProductCardProps } from '@/components/product-card/product-card'
 import { ProductCard } from '@/components/product-card/product-card'
-import type { ProductTagType } from '@/components/product/product-tag'
 import type { ViewMode } from '@/components/view-modes/view-modes'
 import type { HitComponentProps, ProductHit } from '@/typings/hits'
 
@@ -40,17 +38,6 @@ export function ProductCardHitComponent({
     reviews: hit.reviews.count,
   }
 
- /*  // On sales
-  if (hit.price.on_sales) {
-    product.originalPrice = hit.price.value
-    product.price = hit.price.discounted_value
-
-    product.tags?.push({
-      label: `on sale ${hit.price.discount_level}%`,
-      theme: 'on-sale',
-    } as ProductTagType)
-  }
- */
   // Highlighting
   if (highlighting) {
     product.labelHighlighting = () => (
@@ -73,14 +60,6 @@ export function ProductCardHitComponent({
   } else {
     product.description = hit.description
   }
-
- /*  // Tags
-  if (product.reviews && product.reviews >= 90) {
-    product.tags?.push({
-      label: 'popular',
-      theme: 'popular',
-    } as ProductTagType)
-  } */
 
   // Colors
   if (hit.color.filter_group) {

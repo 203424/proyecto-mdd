@@ -6,11 +6,8 @@ import Script from 'next/script'
 import { useMemo } from 'react'
 
 /// #if DEV
-// eslint-disable-next-line import/order
 import { Dev } from '@dev/dev'
 /// #endif
-
-import { Banner } from '@/components/banner/banner'
 import type { FooterProps } from '@/components/footer/footer'
 import type { HeaderProps } from '@/components/header/header'
 import { Loader } from '@/components/loader/loader'
@@ -22,13 +19,13 @@ import { scrollToTop } from '@/utils/scrollToTop'
 import '@/styles/_index.css'
 
 export const Header = dynamic<HeaderProps>(() =>
-  import(/* webpackChunkName: 'common' */ '@/components/header/header').then(
+  import( '@/components/header/header').then(
     (mod) => mod.Header
   )
 )
 
 export const Footer = dynamic<FooterProps>(() =>
-  import(/* webpackChunkName: 'common' */ '@/components/footer/footer').then(
+  import('@/components/footer/footer').then(
     (mod) => mod.Footer
   )
 )
