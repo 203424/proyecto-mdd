@@ -141,17 +141,7 @@ export function ProductCard({
         </div>
       </Link>
 
-      <ProductFavorite
-        className={classNames(
-          'hidden absolute top-1 laptop:block laptop:top-4',
-          {
-            'left-1 laptop:left-4': view === 'list',
-            'right-1 laptop:right-4': view === 'grid',
-          }
-        )}
-        isFavorite={isFavorite}
-        onClick={handleFavoriteClick}
-      />
+      
     </article>
   )
 }
