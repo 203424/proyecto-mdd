@@ -33,20 +33,20 @@ export default function Home(props: SearchPageLayoutProps) {
       />
 
       <ProductsShowcase
-        title="New in shoes"
+        title=""
         indexId="shoes"
         query="shoes"
         hitComponent={ProductCardHitShowcase}
       />
       <ProductsShowcase
-        title="Spring/summer 2021"
+        title=""
         indexId="spring-summer-2021"
         ruleContexts={['home-spring-summer-2021']}
         className="laptop:bg-gray-50"
         hitComponent={ProductCardHitShowcase}
       />
       <ProductsShowcase
-        title="Recommended for you"
+        title=""
         indexId="recommended"
         query="jacket"
         hitComponent={ProductCardHitShowcase}
