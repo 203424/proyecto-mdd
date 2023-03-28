@@ -25,7 +25,7 @@ function AutocompleteIcons({
         </Button>
       )} */}
 
-      {camera && (
+      {/* {camera && (
         <>
           <span className="w-px h-6 bg-neutral-light"></span>
           <Button
@@ -36,7 +36,7 @@ function AutocompleteIcons({
             <Icon icon={CameraIcon} className="text-[0.5em] absolute" />
           </Button>
         </>
-      )}
+      )} */}
     </div>
   )
 }
