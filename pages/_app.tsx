@@ -68,9 +68,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         </>
       )}
 
-      <Banner size="xs-large" className="z-header" fullWidth={true}>
-        20% Off! Code: SPRING21 - Terms apply*
-      </Banner>
+     
       <Header />
 
       <AnimatePresence exitBeforeEnter={true} onExitComplete={scrollToTop}>
