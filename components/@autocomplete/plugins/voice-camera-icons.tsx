@@ -19,11 +19,11 @@ function AutocompleteIcons({
 }: AutocompleteIconsProps) {
   return (
     <div className="h-full flex gap-1 items-center absolute right-0">
-      {voice && (
+{/*       {voice && (
         <Button className="h-full" title="Voice search">
           <VoiceIcon className="text-2xl" />
         </Button>
-      )}
+      )} */}
 
       {camera && (
         <>

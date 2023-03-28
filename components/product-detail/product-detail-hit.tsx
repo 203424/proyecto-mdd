@@ -28,7 +28,7 @@ export function ProductDetailHit({ hit }: ProductDetailHitProps) {
     },
   }
 
-  // On sales
+ /*  // On sales
   if (hit.price.on_sales) {
     product.originalPrice = hit.price.value
     product.price = hit.price.discounted_value
@@ -47,7 +47,7 @@ export function ProductDetailHit({ hit }: ProductDetailHitProps) {
       theme: 'popular',
     } as ProductTagType)
   }
-
+ */
   // Sizes
   if (hit.available_sizes.length) {
     product.sizes?.push(

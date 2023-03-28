@@ -42,7 +42,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <AppLayout>
       <Head>
-        <title>Spencer and Williams</title>
+        <title>Based Shop</title>
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"
