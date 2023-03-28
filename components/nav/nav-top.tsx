@@ -29,7 +29,7 @@ export const NavTop = memo(function NavTop() {
 
         <div className="flex gap-48">
           <div className="hidden items-center gap-8 laptop:flex">
-            <Link
+            {/* <Link
               href="/support"
               title="Support"
               className="can-hover:transition-colors can-hover:hover:text-neutral-dark"
@@ -41,8 +41,8 @@ export const NavTop = memo(function NavTop() {
                 labelPosition="right"
                 classNameLabel="label-regular"
               />
-            </Link>
-            <Link
+            </Link> */}
+           {/*  <Link
               href="/store-locator"
               title="Find a store"
               className="can-hover:transition-colors can-hover:hover:text-neutral-dark"
@@ -54,10 +54,10 @@ export const NavTop = memo(function NavTop() {
                 labelPosition="right"
                 classNameLabel="label-regular"
               />
-            </Link>
+            </Link> */}
           </div>
 
-          <div className="flex items-center gap-6 laptop:gap-3">
+          {/* <div className="flex items-center gap-6 laptop:gap-3">
             <Tablet>
               <Button title="Stores">
                 <IconLabel icon={PinDropIcon} label="Stores" />
@@ -86,7 +86,7 @@ export const NavTop = memo(function NavTop() {
                 <IconLabel icon={ShoppingBagIcon} />
               </Laptop>
             </Button>
-          </div>
+          </div> */}
         </div>
       </div>
 
