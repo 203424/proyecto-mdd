@@ -86,7 +86,7 @@ export const NavTop = memo(function NavTop() {
         <ul className="hidden gap-6 uppercase laptop:flex">
           <NavItem label="Women" href="/catalog/Women" />
           <NavItem label="Men" href="/catalog/Men" />
-          <NavItem label="Accessories" href="/catalog/Accessories" />
+          {/* <NavItem label="Accessories" href="/catalog/Accessories" /> */}
         </ul>
       </nav>
     </div>
